@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# Create a branch locally and set up its remote.
+
 echo 'Creating branch with name: '$1
 pwd
 

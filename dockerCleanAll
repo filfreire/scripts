@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+
+# Clean containters and images of docker.
 
 #Stop containers
 docker stop $(docker ps -a -q)
@@ -8,3 +10,4 @@ docker rm $(docker ps -a -f status=exited -q)
 
 # Remove docker images:
 docker rmi $(docker images -a -q)
+
