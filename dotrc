@@ -1,0 +1,23 @@
+# Personal additions to .bashrc OR .zshrc files
+
+# vars:
+export OWN_HOME="$HOME/personal/"
+export WORK_HOME="$HOME/work/"
+export LRN_HOME="$HOME/learn/"
+
+# dirs:
+alias personal="cd $OWN_HOME"
+alias work="cd $WORK_HOME"
+alias learn="cd $LRN_HOME"
+
+# git:
+alias gitPersonalConfig="git config user.email livrofubia@gmail.com && git config user.name \"Filipe Freire\""
+alias gcmsg='git commit --reuse-message=HEAD@{1}'
+
+# bash typical:
+alias v='vim'
+alias x='chmod u+x $(ls -tr | tail -1)'
+
+# maven:
+alias mvnci="mvn -U clean install"
+alias mvnx="mvn -U clean install -Pqulice"
