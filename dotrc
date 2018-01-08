@@ -21,3 +21,9 @@ alias x='chmod u+x $(ls -tr | tail -1)'
 # maven:
 alias mvnci="mvn -U clean install"
 alias mvnx="mvn -U clean install -Pqulice"
+
+# other:
+
+if [ $(uname) == "Darwin" ]; then
+  alias battery='pmset -g batt | grep "%" | awk "{print \$3}" | sed s/\;//g'
+fi
