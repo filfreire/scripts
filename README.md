@@ -6,7 +6,13 @@ Useful scripts I use on a daily basis
 1. clone the project to `$HOME` dir
 2. rename scripts folder to `.scripts`
 3. add export of scripts path to your `.bashrc` or `.zshrc` file
-```export PATH="$PATH:$HOME/.scripts"```
+```
+export PATH="$PATH:$HOME/.scripts"
+```
+
+## dotrc file
+
+`dotrc` file is where I keep the usual alias and other functions that can be added to `.bashrc` and `.zshrc`
 
 ## License
 Copyright 2017 Filipe Freire
