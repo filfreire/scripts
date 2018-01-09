@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Removal of all untracked files and directories in git folder
+
+echo 'What will be deleted:'
+git clean -n
+
+echo 'Deleting...'
+git clean -f
+git clean -f -d
