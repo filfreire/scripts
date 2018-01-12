@@ -1,5 +1,5 @@
 # scripts
-Useful scripts I use on a daily basis
+Useful scripts I use on a daily basis (Github version! for Gitlab specific go [here](https://gitlab.com/filipefreire/scripts))
 
 ## How to use
 
