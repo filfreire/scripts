@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Get unix timestamp
+
+date +%s
