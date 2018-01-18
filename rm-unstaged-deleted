@@ -3,4 +3,3 @@
 # Stage removal of all deleted files for git.
 
 git ls-files --deleted -z | xargs -0 git rm
-

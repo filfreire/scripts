@@ -3,4 +3,3 @@
 # Know what process is running on a given port. Tested in macOS
 
 sudo lsof -i :$1
-

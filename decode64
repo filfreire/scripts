@@ -3,4 +3,3 @@
 # Decode a base64 String.
 
 echo $1 | base64 --decode
-

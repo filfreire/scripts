@@ -6,4 +6,3 @@ mkdir temp-saved-stashes
 cd temp-saved-stashes
 
 git stash list | sed 's/\//\_/g'|sed 's/ /\_/g' | awk -F ":" '{ system("git stash show -p " $1 " >> " $1$2$3 ".diff" ) }'
-

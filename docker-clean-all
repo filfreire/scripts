@@ -10,4 +10,3 @@ docker rm $(docker ps -a -f status=exited -q)
 
 # Remove docker images:
 docker rmi $(docker images -a -q)
-
