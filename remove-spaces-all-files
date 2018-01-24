@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Remove spaces in all filenames of current directory
+# USAGE: script <filetype (example: jpg txt png)>
+
+IFS="\n"
+for file in *.$1;
+do
+    mv "$file" "${file//[[:space:]]}"
+done
