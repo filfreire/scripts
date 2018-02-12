@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Remove empty json entries ({} and "")
+
+# macOS
+sed -i '' '/""/d' */*.json
+sed -i '' '/{}/d' */*.json
+
+# linux
+#TODO
