@@ -5,3 +5,4 @@
 cd ~
 mv Desktop/Screen\ Shot* screenShots/
 mv Desktop/*.png screenShots/
+mv Desktop/*.jpg screenShots/
