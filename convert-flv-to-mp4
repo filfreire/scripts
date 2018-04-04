@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Convert flv file to mp4
+# example: script.sh my-video.flv my-video.mp4
+
+ARGS_NUM=2
+if [[ ( $# -lt $ARGS_NUM ) ]]; then
+  echo "Usage: script.sh FLV_FILENAME MP4_FILENAME"
+  exit 1
+fi
+
+ffmpeg -i $1 $2 
