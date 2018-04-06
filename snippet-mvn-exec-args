@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Print snippet for mvn exec class with a set of arguments
+
+echo "mvn exec:java -Dexec.mainClass=\"MyApp\" -Dexec.args=\"arg1 arg2 arg3\""

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Print snippet for number of arguments
+# Print snippet for if condition of a str comparison
 
 echo "if [ \"\$_STR\" == \"value\" ]; then"
 echo "  echo \"hello.\""
