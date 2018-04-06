@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Print snippet for number of arguments
+
+echo "if [ \"\$_STR\" == \"value\" ]; then"
+echo "  echo \"hello.\""
+echo "fi"
