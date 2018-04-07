@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Print snippet for jekyll post
+
+echo "---"
+echo "layout: post"
+echo "title: \"What's the color of static analysis?\""
+echo "date: 2018-04-01"
+echo "categories: [static-analysis, testing, quality]"
+echo "---"
