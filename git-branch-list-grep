@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Get a list of git branches grep'ed by some value
+
+git for-each-ref --sort=-committerdate refs/heads/ | grep $1
