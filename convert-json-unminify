@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Unminify set of JSON files
+ 
+for f in *.json; do cat "$f" | python -m json.tool > "${f%.json}_unmin.json"; done
