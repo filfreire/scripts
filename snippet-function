@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Function example
+
+echo "a_func_name()"
+echo "{"
+echo "  USER=\$1"
+echo "  PASSWORD=\$2"
+echo "  echo \"Added user \$USER with pass \$PASSWORD\""
+echo "}"
