@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Reset master branch to remote version
+
+git fetch origin
+git reset --hard origin/master
