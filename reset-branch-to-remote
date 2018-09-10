@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# Reset local branch to remote
-git reset --hard origin/master
