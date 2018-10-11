@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Delete files with a given extension (recursively)
+
+ARGS_NUM=1
+if [[ ( $# -lt $ARGS_NUM ) ]]; then
+  echo "Usage: script.sh EXTENSION"
+  echo "Example: script.sh *.iml"
+  exit 1
+fi
+
+
+find . -type f -name $1 -exec rm {} +
+
