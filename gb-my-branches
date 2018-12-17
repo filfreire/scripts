@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# My git branches
+
+git for-each-ref --format=' %(authorname) %09 %(refname)' | grep -f <(git config user.name)

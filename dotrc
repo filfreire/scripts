@@ -27,3 +27,6 @@ alias mvnx="mvn -U clean install -Pqulice"
 if [ $(uname) == "Darwin" ]; then
   alias battery='pmset -g batt | grep "%" | awk "{print \$3}" | sed s/\;//g'
 fi
+
+alias ls='ls -G'
+alias l='ls -lah'
