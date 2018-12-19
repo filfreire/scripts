@@ -30,3 +30,5 @@ fi
 
 alias ls='ls -G'
 alias l='ls -lah'
+alias jks='jekyll serve'
+alias jksd='jekyll serve --drafts'
