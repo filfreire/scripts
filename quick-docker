@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Quickly raise a tipically used docker-compose file
+
+docker-compose -f ~/.scripts/docker/docker-compose-$1.yml up
