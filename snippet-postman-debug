@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Print snippet for postman debug lines
+
+echo "// LOG-debug"
+echo "tests[\"[DEBUG] Request: \" + JSON.stringify(request)] = true;"
+echo "tests[\"[DEBUG] Response: \" + responseBody] = true;"
