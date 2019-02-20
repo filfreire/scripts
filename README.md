@@ -12,7 +12,7 @@ export PATH="$PATH:$HOME/.scripts"
 
 ## dotrc file
 
-`dotrc` file is where I keep the usual alias and other functions that can be added to `.bashrc` and `.zshrc`
+[dotrc](https://github.com/filfreire/scripts/blob/master/dotrc) file is where I keep the usual alias and other functions that can be added to `.bashrc` and `.zshrc`
 
 ## License
 Copyright 2017-2019 Filipe Freire
