@@ -36,6 +36,7 @@ alias jksd='jekyll serve --drafts'
 #k8s
 alias k='kubectl'
 alias kgpo='kubectl get pods'
+alias kgjo='kubectl get jobs'
 alias kexec='kubectl exec -it'
 alias kdpo='kubectl describe pod'
 alias klogs='kubectl logs --follow'
