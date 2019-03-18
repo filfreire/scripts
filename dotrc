@@ -1,4 +1,6 @@
 # Personal additions to .bashrc OR .zshrc files
+export PS1="\W \$"
+shopt -s autocd
 
 # vars:
 export OWN_HOME="$HOME/personal/"
