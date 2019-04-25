@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Print snippet for a for cycle
+
+echo "for (( c=1; c<=5; c++ ))"
+echo "do"
+echo "   echo \"Welcome $c times\""
+echo "done"
