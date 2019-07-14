@@ -4,7 +4,10 @@
 
 echo "---"
 echo "layout: post"
-echo "title: \"What's the color of static analysis?\""
-echo "date: 2018-04-01"
-echo "categories: [static-analysis, testing, quality]"
+echo "title: \"Frail and cast-iron tools - Episode 1\""
+echo "meta_description: \"Frail and cast-iron tools - Episode 1\""
+echo "date: 2019-05-22"
+echo "categories: [tools, testing, api testing, postman, personal experience]"
+echo "image: /assets/images/2019/05/deltaforce.jpg"
+echo "caption: \"Delta Force, 1986\""
 echo "---"
