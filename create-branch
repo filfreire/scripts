@@ -6,5 +6,5 @@ echo 'Creating branch with name: '$1
 pwd
 
 git checkout -b $1
-git push origin $1
+git push origin $1 --no-verify
 git branch --set-upstream-to=origin/$1 $1
