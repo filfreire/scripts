@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Rise and shine Dr. Freeman.
+
+echo "- - - - - - - - - - - - - - - - - - - -"
+who
+echo "- - - - - - - - - - - - - - - - - - - -"
+uptime
+echo "- - - - - - - - - - - - - - - - - - - -"
+sysctl -a | grep "kern.boottime"
+echo "- - - - - - - - - - - - - - - - - - - -"
+sysctl -a | grep "kern.sleeptime"
+echo "- - - - - - - - - - - - - - - - - - - -"
