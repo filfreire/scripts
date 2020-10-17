@@ -14,6 +14,8 @@ export PATH="$PATH:$HOME/.scripts"
 
 [dotrc](https://github.com/filfreire/scripts/blob/master/dotrc) file is where I keep the usual alias and other functions that can be added to `.bashrc` and `.zshrc`
 
+[git aliases](https://raw.githubusercontent.com/filfreire/oh-my-git-aliases/master/oh-my-git-aliases.sh)
+
 ## License
 Copyright 2017-2019 Filipe Freire
 
