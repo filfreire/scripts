@@ -50,3 +50,6 @@ alias kgcf='kubectl get configmap'
 alias kdcf='kubectl describe configmap'
 alias kecf='kubectl edit configmap'
 alias kgall='kubectl get all'
+
+# uncomment in case you use vs code insiders version
+alias code='code-insiders'
