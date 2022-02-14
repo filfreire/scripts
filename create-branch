@@ -2,9 +2,20 @@
 
 # Create a branch locally and set up its remote.
 
-echo 'Creating branch with name: '$1
-pwd
+ARGS_NUM=2
+if [[ ( $# -lt $ARGS_NUM ) ]]; then
+    echo 'Creating branch with name: '$1
+    pwd
 
-git checkout -b $1
-git push origin $1 --no-verify
-git branch --set-upstream-to=origin/$1 $1
+    git checkout -b $1
+    git push origin $1 --no-verify
+    git branch --set-upstream-to=origin/$1 $1
+else
+    echo "Creating branch on remote $1 with name: $2"
+    pwd
+
+    git checkout -b $2
+    git push $1 $2 --no-verify
+    git branch --set-upstream-to=$1/$2 $2
+fi
+
