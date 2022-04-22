@@ -20,7 +20,7 @@ alias gcmsg='git commit --reuse-message=HEAD@{1}'
 alias v='vim'
 alias x='chmod u+x $(ls -tr | tail -1)'
 
-# maven:
+# Uncomment if using maven:
 # alias mvnci="mvn -U clean install"
 # alias mvnx="mvn -U clean install -Pqulice"
 
@@ -30,18 +30,6 @@ if [ $(uname) == "Darwin" ]; then
   alias battery='pmset -g batt | grep "%" | awk "{print \$3}" | sed s/\;//g'
 fi
 
-# # enable color support of ls and also add handy aliases
-# if [ -x /usr/bin/dircolors ]; then
-#     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-#     alias ls='ls --color=auto'
-#     #alias dir='dir --color=auto'
-#     #alias vdir='vdir --color=auto'
-
-#     alias grep='grep --color=auto'
-#     alias fgrep='fgrep --color=auto'
-#     alias egrep='egrep --color=auto'
-# fi
-
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -50,7 +38,7 @@ alias l='ls -CF'
 alias jks='jekyll serve'
 alias jksd='jekyll serve --drafts'
 
-#k8s
+# Uncomment if using k8s
 # alias k='kubectl'
 # alias kgpo='kubectl get pods'
 # alias kgjo='kubectl get jobs'
@@ -66,16 +54,10 @@ alias jksd='jekyll serve --drafts'
 # alias kecf='kubectl edit configmap'
 # alias kgall='kubectl get all'
 
-# uncomment in case you use vs code insiders version
-# alias code='code-insiders'
-
-
-##################################################################################################
-##################################################################################################
 ##################################################################################################
 
 # INCLUDING oh-my-git-aliases since I need them almost always...
-
+# Taken from https://raw.githubusercontent.com/filfreire/oh-my-git-aliases/master/oh-my-git-aliases.sh
 
 alias g='git'
 
@@ -152,3 +134,6 @@ function current_branch() {
   ref=$(git rev-parse --short HEAD 2> /dev/null) || return
   echo ${ref#refs/heads/}
 }
+
+# uncomment in case you use vs code insiders version
+# alias code='code-insiders'
