@@ -21,8 +21,8 @@ alias v='vim'
 alias x='chmod u+x $(ls -tr | tail -1)'
 
 # maven:
-alias mvnci="mvn -U clean install"
-alias mvnx="mvn -U clean install -Pqulice"
+# alias mvnci="mvn -U clean install"
+# alias mvnx="mvn -U clean install -Pqulice"
 
 # other:
 
@@ -30,26 +30,125 @@ if [ $(uname) == "Darwin" ]; then
   alias battery='pmset -g batt | grep "%" | awk "{print \$3}" | sed s/\;//g'
 fi
 
-alias ls='ls -G'
-alias l='ls -lah'
+# # enable color support of ls and also add handy aliases
+# if [ -x /usr/bin/dircolors ]; then
+#     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+#     alias ls='ls --color=auto'
+#     #alias dir='dir --color=auto'
+#     #alias vdir='vdir --color=auto'
+
+#     alias grep='grep --color=auto'
+#     alias fgrep='fgrep --color=auto'
+#     alias egrep='egrep --color=auto'
+# fi
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
 alias jks='jekyll serve'
 alias jksd='jekyll serve --drafts'
 
 #k8s
-alias k='kubectl'
-alias kgpo='kubectl get pods'
-alias kgjo='kubectl get jobs'
-alias kexec='kubectl exec -it'
-alias kdpo='kubectl describe pod'
-alias klogs='kubectl logs --follow'
-alias kpfw='kubectl port-forward'
-alias kgde='kubectl get deployments'
-alias kdde='kubectl describe deployment'
-alias kede='kubectl edit deployment'
-alias kgcf='kubectl get configmap'
-alias kdcf='kubectl describe configmap'
-alias kecf='kubectl edit configmap'
-alias kgall='kubectl get all'
+# alias k='kubectl'
+# alias kgpo='kubectl get pods'
+# alias kgjo='kubectl get jobs'
+# alias kexec='kubectl exec -it'
+# alias kdpo='kubectl describe pod'
+# alias klogs='kubectl logs --follow'
+# alias kpfw='kubectl port-forward'
+# alias kgde='kubectl get deployments'
+# alias kdde='kubectl describe deployment'
+# alias kede='kubectl edit deployment'
+# alias kgcf='kubectl get configmap'
+# alias kdcf='kubectl describe configmap'
+# alias kecf='kubectl edit configmap'
+# alias kgall='kubectl get all'
 
 # uncomment in case you use vs code insiders version
-alias code='code-insiders'
+# alias code='code-insiders'
+
+
+##################################################################################################
+##################################################################################################
+##################################################################################################
+
+# INCLUDING oh-my-git-aliases since I need them almost always...
+
+
+alias g='git'
+
+alias gst='g status'
+
+alias gfe='g fetch'
+
+alias gco='g checkout'
+alias gcd='gco develop'
+alias gcm='gco master'
+
+alias ggpush='g push origin $(current_branch)'
+alias ggpushf='ggpush --force-with-lease'
+alias ggpusht='g push origin --tags'
+
+alias gc='g commit'
+alias gc!='gc --amend'
+alias gca='gc -a'
+alias gca!='gca --amend'
+
+alias gl='g pull'
+alias glr='gl --rebase'
+alias glff='gl --ff-only'
+
+alias gm='g merge'
+alias gmff='gm --ff-only'
+alias gmnff='gm --no-ff'
+
+alias ga='g add'
+alias gap='ga --patch'
+alias gai='ga -i'
+
+alias gb='g branch'
+alias gba='g branch -a'
+
+alias ggr='git grep'
+
+alias grb='g rebase'
+alias grbi='grb --interactive'
+alias grbiod='grbi origin/develop'
+alias grbiom='grbi origin/master'
+alias grbc='grb --continue'
+alias grba='grb --abort'
+
+alias gt='g tag'
+
+alias gre='g reset'
+alias greh='gre --hard'
+alias ggrh='greh origin/$(current_branch)'
+
+grf() {
+        gre @~ "$@" && gc! --no-edit
+}
+
+alias gd='g diff'
+alias gdo='gd origin/$(current_branch) $(current_branch)'
+
+alias gcp='g cherry-pick'
+alias gcpa='gcp --abort'
+alias gcpc='gcp --continue'
+
+alias gsts='git stash show --text'
+alias gsta='g stash'
+alias gstp='gsta pop'
+alias gstd='gsta drop'
+
+alias gcl='g clone'
+
+alias gr='g remote'
+
+# https://github.com/robbyrussell/oh-my-zsh
+function current_branch() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || \
+  ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+  echo ${ref#refs/heads/}
+}
