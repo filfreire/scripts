@@ -3,8 +3,13 @@
 # Clear macOS screenshots from Desktop folder and move them to a screenShots folder.
 
 cd ~
+mkdir -p screenShots
 mv Desktop/ScreenShot* screenShots/
 mv Desktop/Screen\ Shot* screenShots/
 mv Desktop/*.png screenShots/
 mv Desktop/*.jpg screenShots/
 mv Desktop/*.jpeg screenShots/
+
+mv Desktop/*.PNG screenShots/
+mv Desktop/*.JPG screenShots/
+mv Desktop/*.JPEG scr
