@@ -10,3 +10,6 @@ docker rm $(docker ps -a -f status=exited -q)
 
 # Remove docker images:
 docker rmi -f $(docker images -a -q)
+
+# Remove dangling networks:
+docker network prune -f
