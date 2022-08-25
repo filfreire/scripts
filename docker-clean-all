@@ -13,3 +13,6 @@ docker rmi -f $(docker images -a -q)
 
 # Remove dangling networks:
 docker network prune -f
+
+# Remove dangling volumes:
+docker volume prune -f
