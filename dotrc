@@ -5,6 +5,10 @@ parse_git_branch() {
 
 export PS1="\W \[\e[91m\]\$(parse_git_branch)\[\e[00m\]\$"
 
+if [ -f ~/.scripts/.git-completion.bash ]; then
+  . ~/.scripts/.git-completion.bash
+fi
+
 shopt -s autocd
 
 # vars:
