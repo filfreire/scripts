@@ -9,6 +9,16 @@ if [ -f ~/.scripts/.git-completion.bash ]; then
   . ~/.scripts/.git-completion.bash
 fi
 
+## docker bash completion for MacOS
+if [ -f /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion ]; then
+  . /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion
+fi
+
+## docker-compose bash completion for MacOS
+if [ -f /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion ]; then
+  . /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion
+fi
+
 shopt -s autocd
 
 # vars:
