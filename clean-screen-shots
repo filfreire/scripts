@@ -12,8 +12,10 @@ mv Desktop/*.jpeg screenShots/
 
 mv Desktop/*.PNG screenShots/
 mv Desktop/*.JPG screenShots/
-mv Desktop/*.JPEG scr
+mv Desktop/*.JPEG screenShots/
 
+mv Desktop/*.svg screenShots/
+mv Desktop/*.SVG screenShots/
 
 mv Desktop/Screen\ Recording* Movies/
 mv Desktop/*.mov Movies/

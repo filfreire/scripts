@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Clear macOS Downloads folder.
+cd ~
+mkdir -p Documents/zip/
+mv Downloads/*.zip Documents/zip/
+
+mkdir -p Documents/pdf/
+mv Downloads/*.pdf Documents/pdf/
+
+mkdir -p screenShots
+mv Downloads/ScreenShot* screenShots/
+mv Downloads/Screen\ Shot* screenShots/
+mv Downloads/*.png screenShots/
+mv Downloads/*.jpg screenShots/
+mv Downloads/*.jpeg screenShots/
+
+mv Downloads/*.PNG screenShots/
+mv Downloads/*.JPG screenShots/
+mv Downloads/*.JPEG screenShots/
+
+mv Downloads/*.svg screenShots/
+mv Downloads/*.SVG screenShots/
+
+mv Downloads/Screen\ Recording* Movies/
+mv Downloads/*.mov Movies/
+mv Downloads/*.mp4 Movies/
