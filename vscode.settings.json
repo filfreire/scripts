@@ -1,24 +1,8 @@
 {
-    "redhat.telemetry.enabled": false,
-    "security.workspace.trust.untrustedFiles": "open",
-    "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "workbench.colorTheme": "Visual Studio Dark",
-    "editor.inlineSuggest.enabled": true,
-    "gitlens.advanced.fileHistoryFollowsRenames": true,
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "editor.tabSize": 2,
+    "workbench.colorTheme": "Default Dark+",
     "editor.codeActionsOnSave": {
         "source.fixAll": true
     },
-    "githubPullRequests.pullBranch": "never",
-    "diffEditor.ignoreTrimWhitespace": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "terminal.integrated.profiles.osx": {
         "bash": {
@@ -27,13 +11,45 @@
                 "-l"
             ],
             "icon": "terminal-bash"
-        },
-        "zsh": {
-            "path": "zsh",
-            "args": [
-                "-l"
-            ]
         }
+    },
+    "window.nativeTabs": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "eslint.validate": [
+        "javascript"
+    ],
+    "workbench.startupEditor": "none",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.wordWrap": "on",
+    "remote.SSH.remotePlatform": {
+        "192.168.1.114": "linux",
+        "192.168.1.134": "linux"
+    },
+    "cSpell.userWords": [
+        "caralho"
+    ],
+    "git.ignoreWindowsGit27Warning": true,
+    "editor.inlineSuggest.enabled": true,
+    "workbench.editor.untitled.hint": "hidden",
+    "[plaintext]": {
+        "editor.wordBasedSuggestions": false,
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        },
+    },
+    "cSpell.language": "en,pt",
+    "git.autofetch": true,
+    "githubPullRequests.pullBranch": "never",
+    "vs-kubernetes": {
+        "vscode-kubernetes.minikube-path.mac": "/Users/filipe.freire@konghq.com/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+    },
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.formatOnSave": true
     }
 }
-
