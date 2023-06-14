@@ -15,4 +15,7 @@ docker rmi -f $(docker images -a -q)
 docker network prune -f
 
 # Remove dangling volumes:
-docker volume prune -f
+# docker volume prune -f
+
+# remove all volumes:
+docker volume rm $(docker volume ls -q)
