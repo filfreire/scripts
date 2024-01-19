@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# clear macOS logs to speed up terminal
-sudo rm -rf /private/var/log/asl/*.asl
-
-
-
