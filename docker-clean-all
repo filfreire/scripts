@@ -7,6 +7,7 @@ docker stop $(docker ps -a -q)
 
 #Remove docker containers:
 docker rm $(docker ps -a -f status=exited -q)
+docker rm $(docker ps -a -f status=created -q)
 
 # Remove docker images:
 docker rmi -f $(docker images -a -q)
@@ -15,7 +16,7 @@ docker rmi -f $(docker images -a -q)
 docker network prune -f
 
 # Remove dangling volumes:
-# docker volume prune -f
+docker volume prune -f
 
 # remove all volumes:
 docker volume rm $(docker volume ls -q)
