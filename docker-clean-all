@@ -2,6 +2,14 @@
 
 # Clean containters and images of docker.
 
+# check if docker is online and close the script otherwise
+if ! docker info > /dev/null 2>&1; then
+    echo "Docker is not running. Exiting..."
+    echo " - MacOS: open -a Docker"
+    echo " - ubuntu: sudo systemctl restart docker"
+    exit 1
+fi
+
 #Stop containers
 docker stop $(docker ps -a -q)
 
