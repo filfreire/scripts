@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# Undo git reset HEAD~
-git reset 'HEAD@{1}'

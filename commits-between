@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# List commits between two git tags
-
-git log --pretty=oneline $1..$2

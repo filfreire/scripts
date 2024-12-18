@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# Git branches by author
-
-git for-each-ref --format=' %(authorname)' | sort | uniq -c | sort -nr

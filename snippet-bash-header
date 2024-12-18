@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# print bash default header
-
-echo "#!/usr/bin/env bash"

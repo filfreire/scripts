@@ -1,6 +1,0 @@
-#!/bin/bash
-
-# What is my external ip.
-
-curl -s http://whatismyip.akamai.com/
-

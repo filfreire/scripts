@@ -1,4 +1,0 @@
-#!/bin/bash
-
-echo '-p "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"update-timestamp\":\"$(date +%s)\"}}}}}"'
-

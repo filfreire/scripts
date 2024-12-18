@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# Print snippet for number of arguments
-
-echo "ARGS_NUM=2"
-echo "if [[ ( "\$#" -lt "\$ARGS_NUM" ) ]]; then"
-echo "  echo \"Usage: script.sh USER TOKEN\""
-echo "  exit 1"
-echo "fi"

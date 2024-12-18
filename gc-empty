@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# Issue an empty commit to kick "github jekyll build"
-
-git commit --allow-empty -m "Empty commit, trigger notification"

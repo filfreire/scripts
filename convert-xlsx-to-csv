@@ -1,6 +1,0 @@
-#!/bin/bash
-
-# Convert all .xlsx files in current folder to .csv files
-# requirements: `apt-get install gnumeric` or `brew install gnumeric`
-
-for f in *.xlsx; do ssconvert "$f" "${f%.xlsx}.csv"; done

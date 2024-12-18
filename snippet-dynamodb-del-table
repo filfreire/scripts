@@ -1,3 +1,0 @@
-#!/bin/bash
-# print dynamodb delete table snippet
-echo "aws dynamodb delete-table --table-name <table-name>"

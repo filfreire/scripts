@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# Get current version of pom.xml
-
-head pom.xml | grep version

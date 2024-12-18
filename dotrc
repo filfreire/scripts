@@ -1,3 +1,6 @@
+# TODO this needs to be reorganized
+# TODO add tailscale stuff
+
 alias manpath=false
 shopt -s autocd
 
@@ -10,9 +13,15 @@ export PATH="$PATH:$HOME/.scripts"
 ## disable sleep on close lid regardless of power source
 ## sudo pmset disablesleep 1
 
-# eval "$(/opt/homebrew/bin/brew shellenv)"
-# eval "$(fnm env)"
-# eval "$(mcfly init bash)"
+# # eval "$(/opt/homebrew/bin/brew shellenv)"
+# # eval "$(fnm env)"
+# # eval "$(mcfly init bash)"
+
+# # export SHELL_SESSION_HISTORY=0
+# # export PATH="$PATH:$HOME/.scripts"
+# # export PATH="$PATH:$HOME/.docker/bin"
+# # export PATH="$PATH:/opt/homebrew/opt/libpq/bin"
+
 
 # export SHELL_SESSION_HISTORY=0
 export PATH="$PATH:$HOME/.scripts"
@@ -115,3 +124,229 @@ function current_branch() {
 
 
 alias datestamp='date +"%d%m%y-%H%M"'
+
+## TODO organize this better
+
+alias test-shell-latency='for i in $(seq 1 10); do time $SHELL -i -c exit; done'
+
+alias cafe='caffeinate -d'
+alias web="gh repo view --web"
+
+
+# # elgato
+# alias light-on="curl -s -o /dev/null --request PUT --url http://192.168.1.2:9123/elgato/lights --header 'Accept: application/json' --header 'Content-Type: application/json' --data '{\"numberOfLights\": 1,\"lights\": [{\"on\": 1,\"brightness\": 50,\"temperature\": 200}]}'"
+# alias lumos=light-on
+# alias light-off="curl -s -o /dev/null --request PUT --url http://192.168.1.2:9123/elgato/lights --header 'Accept: application/json' --header 'Content-Type: application/json' --data '{\"numberOfLights\": 1,\"lights\": [{\"on\": 0}]}'"
+# alias nox=light-off
+
+## special git aliases
+
+# TODO FIX THESE
+# alias gb-list-grep='git for-each-ref --sort=-committerdate refs/heads/ | grep $1'
+# alias gb-by-author='git for-each-ref --format=' %(authorname)' | sort | uniq -c | sort -nr'
+# alias gb-my-branches='git for-each-ref --format=' %(authorname) %09 %(refname)' | grep -f <(git config user.name)'
+
+# # commits between
+# git log --pretty=oneline $1..$2
+
+# # rm-unstaged-deleted
+# git ls-files --deleted -z | xargs -0 git rm
+
+
+# # rm-untracked
+# # Removal of all untracked files and directories in git folder
+# echo 'What will be deleted:'
+# git clean -n
+# echo 'Deleting...'
+# git clean -f
+# git clean -f -d
+
+# # git clean alternative
+# git clean -dfX
+
+
+# # Save all stashes, credit to @ordepdev, https://stackoverflow.com/a/48299431/7468990
+# mkdir temp-saved-stashes
+# cd temp-saved-stashes
+# git stash list | sed 's/\//\_/g'|sed 's/ /\_/g' | awk -F ":" '{ system("git stash show -p " $1 " >> " $1$2$3 ".diff" ) }'
+
+
+# # reset-master-to-remote
+# git fetch origin
+# git reset --hard origin/master
+
+
+
+## other aliases
+
+# # k8s snippet-patch-deploy
+# echo '-p "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"update-timestamp\":\"$(date +%s)\"}}}}}"'
+
+
+# # snippet post
+# # Print snippet for jekyll post
+# echo "---"
+# echo "layout: post"
+# echo "title: \"Frail and cast-iron tools - Episode 1\""
+# echo "meta_description: \"Frail and cast-iron tools - Episode 1\""
+# echo "date: 2019-05-22"
+# echo "categories: [tools, testing, api testing, postman, personal experience]"
+# echo "image: /assets/images/2019/05/deltaforce.jpg"
+# echo "caption: \"Delta Force, 1986\""
+# echo "---"
+
+
+# # start bitbucket
+# docker volume create --name bitbucketVolume
+# docker run -v bitbucketVolume:/var/atlassian/application-data/bitbucket --name="bitbucket" -d -p 7990:7990 -p 7999:7999 atlassian/bitbucket
+
+# # start gitlab
+# GITLAB_HOME=$HOME/gitlab
+# sudo docker run --detach \
+#   --hostname gitlab.example.com \
+#   --publish 443:443 --publish 80:80 --publish 22:22 \
+#   --name gitlab \
+#   --restart always \
+#   --volume $GITLAB_HOME/config:/etc/gitlab \
+#   --volume $GITLAB_HOME/logs:/var/log/gitlab \
+#   --volume $GITLAB_HOME/data:/var/opt/gitlab \
+#   --shm-size 256m \
+#   gitlab/gitlab-ee:latest
+
+# # start valheim
+# docker run -d \
+#     --name valheim-server \
+#     --cap-add=sys_nice \
+#     --stop-timeout 120 \
+#     -p 2456-2457:2456-2457/udp \
+#     -v $HOME/valheim/server/config:/config \
+#     -v $HOME/valheim/server/data:/opt/valheim \
+#     -e SERVER_NAME="Valheim Server" \
+#     -e WORLD_NAME="Neotopia" \
+#     -e SERVER_PASS="segredo123" \
+#     ghcr.io/lloesche/valheim-server
+
+
+# # Delete files with a given extension (recursively)
+# ARGS_NUM=1
+# if [[ ( $# -lt $ARGS_NUM ) ]]; then
+#   echo "Usage: script.sh EXTENSION"
+#   echo "Example: script.sh *.iml"
+#   exit 1
+# fi
+# find . -type f -name $1 -exec rm {} +
+
+
+# # convert flv to mp4
+# ARGS_NUM=2
+# if [[ ( $# -lt $ARGS_NUM ) ]]; then
+#   echo "Usage: script.sh FLV_FILENAME MP4_FILENAME"
+#   exit 1
+# fi
+# ffmpeg -i $1 $2
+
+
+# # Remove spaces in all filenames of current directory
+# # USAGE: script <filetype (example: jpg txt png)>
+# IFS="\n"
+# for file in *.$1;
+# do
+#     mv "$file" "${file//[[:space:]]}"
+# done
+
+# # Unminify set of JSON files
+# for f in *.json; do cat "$f" | python -m json.tool > "${f%.json}_unmin.json"; done
+
+
+
+# # container ip
+# docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $1
+
+# # disable macos dashboard
+# defaults write com.apple.dashboard mcx-disabled -boolean YES && killall Dock
+
+
+# # Disable macos Report crash
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.ReportCrash.plist
+# sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.ReportCrash.Root.plist
+
+
+# # Enable Report crash
+# launchctl load -w /System/Library/LaunchAgents/com.apple.ReportCrash.plist
+# sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.ReportCrash.Root.plist
+
+
+# # find-duplicate-lines
+# ARGS_NUM=1
+# if [[ ( $# -lt $ARGS_NUM ) ]]; then
+#   echo "Usage: script.sh FILENAME"
+#   exit 1
+# fi
+
+
+# # Fix Virtualbox
+# # https://www.virtualbox.org/ticket/20636#comment:18
+# sudo kextload -b org.virtualbox.kext.VBoxDrv;
+# sudo kextload -b org.virtualbox.kext.VBoxNetFlt;
+# sudo kextload -b org.virtualbox.kext.VBoxNetAdp;
+# sudo kextload -b org.virtualbox.kext.VBoxUSB;
+
+# # minify-pdf
+# # requires ghostscript
+# ARGS_NUM=1
+# if [[ ( $# -lt $ARGS_NUM ) ]]; then
+#   echo "Usage: script.sh FILENAME"
+#   exit 1
+# fi
+# ps2pdf $1.pdf $1-min.pdf
+
+
+# # unique line count
+# sort $1 | uniq -c
+
+# # convert xlsx to csv
+# for f in *.xlsx; do ssconvert "$f" "${f%.xlsx}.csv"; done
+
+alias snippet-bash-header='echo "#!/usr/bin/env bash"'
+
+alias unix-timestamp='date +%s'
+
+alias current-week='date +%V'
+
+# # port-info
+# sudo lsof -i :$1
+
+# # time.sh
+# START=$(date +%s)
+# ${*}
+# END=$(date +%s)
+# DIFF=$(echo "$END - $START" | bc)
+# echo "Execution time: $DIFF seconds."
+
+
+## TODO
+# # snippet-for-cycle
+# echo "for (( c=1; c<=5; c++ ))"
+# echo "do"
+# echo "   echo \"Welcome $c times\""
+# echo "done"
+
+# # snippet-function
+# echo "a_func_name()"
+# echo "{"
+# echo "  USER=\$1"
+# echo "  PASSWORD=\$2"
+# echo "  echo \"Added user \$USER with pass \$PASSWORD\""
+# echo "}"
+
+# # # snippet-if-str
+# echo "if [ \"\$_STR\" == \"value\" ]; then"
+# echo "  echo \"hello.\""
+# echo "fi"
+
+# # snippet-number-of-args
+# echo "ARGS_NUM=2"
+# echo "if [[ ( "\$#" -lt "\$ARGS_NUM" ) ]]; then"
+# echo "  echo \"Usage: script.sh USER TOKEN\""
+# echo "  exit 1"
+# echo "fi"

@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# Pre-create useful java folders for maven project
-
-mkdir src src/main src/test src/main/java/ src/test/java src/main/java/com/ src/test/java/com/ src/main/java/com/filfreire src/test/java/com/filfreire
-touch src/main/java/com/filfreire/Dummy.java
-touch src/main/java/com/filfreire/package-info.java
-touch src/test/java/com/filfreire/DummyTest.java
-touch src/test/java/com/filfreire/package-info.java
